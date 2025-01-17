@@ -114,15 +114,20 @@ fun BookListItem(
                     )
                 }
                 book.averageRating?.let { rating ->
-                    Text(
-                        text = "${round(rating * 10) / 10.0}",
-                        style = MaterialTheme.typography.bodyLarge,
-                    )
-                    Icon(
-                        imageVector = Icons.Default.Star,
-                        contentDescription = null,
-                        tint = SandYellow
-                    )
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+
+                        Text(
+                            text = "${round(rating * 10) / 10.0}",
+                            style = MaterialTheme.typography.bodyLarge,
+                        )
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = null,
+                            tint = SandYellow
+                        )
+                    }
                 }
             }
             Icon(
