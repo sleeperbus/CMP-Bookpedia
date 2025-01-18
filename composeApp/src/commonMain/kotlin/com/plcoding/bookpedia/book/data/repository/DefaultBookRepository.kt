@@ -1,16 +1,17 @@
-package com.plcoding.bookpedia.data.repository
+package com.plcoding.bookpedia.book.data.repository
 
 import com.plcoding.bookpedia.book.domain.Book
 import com.plcoding.bookpedia.core.domain.DataError
 import com.plcoding.bookpedia.core.domain.Result
 import com.plcoding.bookpedia.core.domain.map
-import com.plcoding.bookpedia.data.mappers.toBook
-import com.plcoding.bookpedia.data.network.KtorRemoteBookDataSource
+import com.plcoding.bookpedia.book.data.mappers.toBook
+import com.plcoding.bookpedia.book.data.network.KtorRemoteBookDataSource
+import com.plcoding.bookpedia.book.domain.BookRepository
 
 class DefaultBookRepository(
     private val dataSource: KtorRemoteBookDataSource
-) {
-    suspend fun searchBooks(query: String): Result<List<Book>, DataError.Remote> {
+): BookRepository {
+    override suspend fun searchBooks(query: String): Result<List<Book>, DataError.Remote> {
         return dataSource
             .searchBooks(query)
             .map { dto ->

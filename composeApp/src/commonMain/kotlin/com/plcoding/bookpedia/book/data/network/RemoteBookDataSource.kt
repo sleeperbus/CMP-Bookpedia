@@ -1,8 +1,8 @@
-package com.plcoding.bookpedia.data.network
+package com.plcoding.bookpedia.book.data.network
 
 import com.plcoding.bookpedia.core.domain.DataError
 import com.plcoding.bookpedia.core.domain.Result
-import com.plcoding.bookpedia.data.dto.SearchResponseDto
+import com.plcoding.bookpedia.book.data.dto.SearchResponseDto
 
 interface RemoteBookDataSource {
     suspend fun searchBooks(
