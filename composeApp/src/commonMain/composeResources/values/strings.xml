@@ -4,6 +4,12 @@
     <string name="close_hint">Clear Search</string>
     <string name="search_result">Search Result</string>
     <string name="favorites">Favorites</string>
+    <string name="book_cover">Book cover</string>
+    <string name="rating">Rating</string>
+    <string name="pages">Pages</string>
+    <string name="languages">Languages</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="description_unavailable">Description not available.</string>
     <string name="no_search_results">Oops, there aren't any books for your search query</string>
     <string name="no_favorite_books">You haven't any favorites books yet.</string>
     <string name="error_disk_full">Oops, it seems like your disk is full.</string>

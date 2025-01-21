@@ -15,7 +15,6 @@ fun main() {
             title = "CMP-Bookpedia"
         ) {
             App(
-                engine = remember { OkHttp.create() }
             )
         }
     }
