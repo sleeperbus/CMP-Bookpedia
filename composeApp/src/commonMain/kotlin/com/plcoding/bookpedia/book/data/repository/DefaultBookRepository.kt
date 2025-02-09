@@ -18,4 +18,9 @@ class DefaultBookRepository(
                 dto.books.map { it.toBook() }
             }
     }
+
+    override suspend fun getBookDescription(bookId: String): Result<String?, DataError> {
+        return dataSource.getBookDetails(bookId)
+            .map { it.description }
+    }
 }
